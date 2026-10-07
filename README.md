@@ -11,6 +11,7 @@ Revenue relative to rental count is just revenue per rental. In Sakila, that is 
 A hint to think about, not answer yet: if a category earns a high revenue per rental, would that be a reason to stock more of it? Why or why not? And what two quantities would you compare to see whether a category's copies are being used heavily or sitting idle? (Look back at the supply side I mentioned, the inventory table.)
 
 ## Approach
+Question compares categories across stores. It isn't a monthly trend, so the partial May doesn't create a fake drop the way it would on a trend chart. For this project I'd use 24 May to 31 August 2005 and exclude February 2006. If a monthly chart must be added, I'd show June to August only, or label May as partial.
 
 ## Key Findings
 
