@@ -33,7 +33,32 @@ where r.rental_date < '2005-09-01'
 ;
 ```
 
-**Measure:** rentals per copy per store and category, over 24 May to 31 August 2005,  with store assigned by inventory.store_id. 
+**Measure:** rentals per copy per store and category, 24 May to 31 August 2005, store from inventory.store_id, idle copies kept (4581 copies). 42 films have no copies and can't appear in any rental-based result. 
+
+```
+with copies as (
+select i.store_id as store_id, c.name as category, count(distinct i.inventory_id) as n_inventory
+from inventory i 
+    join film_category fc on i.film_id = fc.film_id
+    join category c on c.category_id = fc.category_id
+group by c.name, i.store_id
+),
+rentals_in_period as (
+select i.store_id as store_id, c.name as category, count(rental_id) as n_rentals 
+from inventory i 
+	join rental r on i.inventory_id = r.inventory_id
+    join film_category fc on i.film_id = fc.film_id
+    join category c on c.category_id = fc.category_id
+where r.rental_date < '2005-09-01'
+group by c.name, i.store_id
+)
+select cp.store_id, cp.category, cp.n_inventory, rp.n_rentals, round(COALESCE(rp.n_rentals, 0)/cp.n_inventory, 2) as rental_per_copy
+from copies cp
+	left join rentals_in_period rp on cp.store_id = rp.store_id and cp.category = rp.category
+order by rental_per_copy desc
+;    
+```
+
 
 ## Key Findings
 
