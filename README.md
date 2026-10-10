@@ -61,5 +61,10 @@ order by rental_per_copy desc
 
 
 ## Key Findings
+1. Store 2 Documentary: 3.65 rentals per copy, the highest of 32 store-category combinations.
+2. The lowest is store 2 Horror at 3.32, implying the strongest and weakest combinations differ by only about 10%.
+3. In store 2, the highest and lowest categories by rentals per copy are Documentary and Horror, respectively.
+4. Drama has the highest rentals per copy in Store 1, while Sports and New are the lowest.
+
 
 ## Recommendations
