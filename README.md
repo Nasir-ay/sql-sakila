@@ -1,7 +1,7 @@
 # sql-sakila
 
-## Business Question (draft)
-Which film category has the highest revenue relative to rental count in each store, so that the rental chain's manager can decide whether to increase or reduce inventory of the specific category?
+## Business Question
+Which store-category combinations have the highest rentals per copy (24 May to 31 Aug 2005), and where might the manager add copies?
 
 ## Approach
 **Scope:** I used rentals from 24th May to 31st August 2005 because it is a continuous period, excluding the missing subsequent months and the last partial month. I also handled duplicates in the query rather than removing them from the table.
@@ -61,10 +61,9 @@ order by rental_per_copy desc
 
 
 ## Key Findings
-1. Store 2 Documentary: 3.65 rentals per copy, the highest of 32 store-category combinations.
-2. The lowest is store 2 Horror at 3.32, implying the strongest and weakest combinations differ by only about 10%.
-3. In store 2, the highest and lowest categories by rentals per copy are Documentary and Horror, respectively.
-4. Drama has the highest rentals per copy in Store 1, while Sports and New are the lowest.
+1. Copies are used almost evenly: the gap between best and worst store-category combination based on rentals per copy is about 10% overall.
+1. In store 2, the highest and lowest categories by rentals per copy are Documentary and Horror, respectively, 3.65 vs. 3.32.
+1. In store 1, the highest category is Drama (3.54), while the lowest categories are Sports and New (3.36 each).
 
 
 ## Recommendations
