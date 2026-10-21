@@ -87,7 +87,7 @@ order by rental_per_copy desc
 
 
 ## Recommendations
-The manager needn't add copies to any categories right now. Documentary in store 2 has the highest rentals per copy, but a 9% gap over three full months and eight days is small. This is based on only 4 continuous months of data, with 3 full months and 1 partial month, so seasonal products may mislead.
+The manager needn't add copies to any categories right now. Documentary in store 2 has the highest rentals per copy, but a 9% gap over three full months and eight days is small. Moreover, this is based on only three full months and eight days data, so seasonal products may mislead. Also, rentals per copy shows demand per copy, not whether stock is adequate, and evenly used copies could all be over-stocked or under-stocked.
 
 ## Next steps
 Rental duration, which converts rentals per copy into a utilisation rate, was not calculated, although rental date and return date were included. The average duration of rentals should be calculated.
