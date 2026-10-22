@@ -81,9 +81,8 @@ order by rental_per_copy desc
 
 
 ## Key Findings
-1. Copies are used almost evenly: the gap between best and worst store-category combination based on rentals per copy is about 9%, calculated as ([best - worst] / best) * 100.
-1. In store 2, the highest and lowest categories by rentals per copy are Documentary and Horror, respectively, 3.65 vs. 3.32.
-1. In store 1, the highest category is Drama (3.54), while the lowest categories are Sports and New (3.36 each).
+1. The gap between the best and worst store-category combination based on rentals per copy (Documentary vs Horror, store 2: 3.65 vs 3.32) is about 9%, similar in size to the variation expected by chance for counts of 450 to 600 rentals (roughly 6%, though not formally tested), so I can’t conclude any category has genuinely higher demand per copy.
+2. Rentals per copy is close to even, partly because stock is already roughly proportional to demand (Documentary store 2 has 164 copies and 599 rentals, while Horror has 136 copies and 451 rentals).
 
 
 ## Recommendations
